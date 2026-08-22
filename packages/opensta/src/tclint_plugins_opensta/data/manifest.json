@@ -1,0 +1,71 @@
+{
+  "2.7": {
+    "sta_version": "2.7.0",
+    "commit_sha": "703acbeb8287bb438655d318282a063ef1aabde0",
+    "generated_at": "2026-08-22T15:03:22Z",
+    "source_files": [
+      "sdc/Sdc.tcl",
+      "tcl/CmdUtil.tcl",
+      "tcl/Property.tcl",
+      "tcl/Sta.tcl",
+      "tcl/Util.tcl",
+      "search/Search.tcl",
+      "liberty/Liberty.tcl",
+      "network/Link.tcl",
+      "network/Network.tcl",
+      "graph/Graph.tcl",
+      "power/Power.tcl",
+      "parasitics/Parasitics.tcl",
+      "sdf/Sdf.tcl",
+      "spice/WriteSpice.tcl",
+      "dcalc/DelayCalc.tcl",
+      "verilog/Verilog.tcl"
+    ]
+  },
+  "3.0": {
+    "sta_version": "3.0.1",
+    "commit_sha": "41ad5c62b8f6f2596d9b1983255c0928537bdd31",
+    "generated_at": "2026-08-22T15:03:22Z",
+    "source_files": [
+      "sdc/Sdc.tcl",
+      "tcl/CmdUtil.tcl",
+      "tcl/Property.tcl",
+      "tcl/Sta.tcl",
+      "tcl/Util.tcl",
+      "search/Search.tcl",
+      "liberty/Liberty.tcl",
+      "network/Link.tcl",
+      "network/Network.tcl",
+      "graph/Graph.tcl",
+      "power/Power.tcl",
+      "parasitics/Parasitics.tcl",
+      "sdf/Sdf.tcl",
+      "spice/WriteSpice.tcl",
+      "dcalc/DelayCalc.tcl",
+      "verilog/Verilog.tcl"
+    ]
+  },
+  "3.1": {
+    "sta_version": "3.1.0",
+    "commit_sha": "d1b2b3962cd47539c748bb163da5de2bd5d2f85f",
+    "generated_at": "2026-08-22T15:03:22Z",
+    "source_files": [
+      "sdc/Sdc.tcl",
+      "tcl/CmdUtil.tcl",
+      "tcl/Property.tcl",
+      "tcl/Sta.tcl",
+      "tcl/Util.tcl",
+      "search/Search.tcl",
+      "liberty/Liberty.tcl",
+      "network/Link.tcl",
+      "network/Network.tcl",
+      "graph/Graph.tcl",
+      "power/Power.tcl",
+      "parasitics/Parasitics.tcl",
+      "sdf/Sdf.tcl",
+      "spice/WriteSpice.tcl",
+      "dcalc/DelayCalc.tcl",
+      "verilog/Verilog.tcl"
+    ]
+  }
+}

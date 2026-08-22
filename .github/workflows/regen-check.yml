@@ -1,0 +1,55 @@
+name: OpenSTA spec regen check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
+
+jobs:
+  regen-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Clone OpenSTA
+        run: git clone --filter=blob:none https://github.com/The-OpenROAD-Project/OpenSTA.git /tmp/opensta
+
+      - name: Check committed specs against their pinned commits
+        run: |
+          set -e
+          python3 - <<'EOF'
+          import json, subprocess
+
+          manifest = json.load(open("packages/opensta/src/tclint_plugins_opensta/data/manifest.json"))
+          for version, info in manifest.items():
+              subprocess.run(
+                  ["git", "-C", "/tmp/opensta", "checkout", "-q", info["commit_sha"]],
+                  check=True,
+              )
+              subprocess.run(
+                  [
+                      "python3", "packages/opensta/generator/generate.py",
+                      "--repo", "/tmp/opensta",
+                      "--out", f"packages/opensta/src/tclint_plugins_opensta/data/{version}.json",
+                      "--check",
+                  ],
+                  check=True,
+              )
+          EOF
+
+      - name: Check for a newer OpenSTA minor
+        run: |
+          set -e
+          cd /tmp/opensta && git checkout -q origin/HEAD
+          upstream=$(grep -m1 "project(STA VERSION" CMakeLists.txt | grep -oE '[0-9]+\.[0-9]+' | head -1)
+          latest=$(python3 -c "
+          import json
+          m = json.load(open('$GITHUB_WORKSPACE/packages/opensta/src/tclint_plugins_opensta/data/manifest.json'))
+          print(sorted(m, key=lambda v: tuple(int(p) for p in v.split('.')))[-1])
+          ")
+          if [ "$upstream" != "$latest" ]; then
+            echo "::notice::OpenSTA upstream is on minor $upstream, but this package's latest snapshot is $latest - consider cutting a new snapshot (see packages/opensta/README.md)."
+          fi

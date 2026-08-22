@@ -1,0 +1,33 @@
+# Hand-curated corrections applied on top of generate.py's scrape output.
+# Applied to every OpenSTA minor unless a minor-specific override file exists
+# (see generate.py's --overrides flag). Keep entries small and note *why* a
+# correction is needed - these get re-reviewed whenever a new minor is cut.
+#
+# Patch semantics (see generate.py:deep_merge/apply_overrides):
+#   <command>: {...}        deep-merges into the scraped spec (dict keys merge,
+#                            list values - e.g. "positionals" - replace wholesale)
+#   <command>: null          marks the command "skip validation" (name known,
+#                            args unchecked)
+#   <command>: {_replace: true, ...}   replaces the scraped spec entirely
+
+get_scenes:
+  # define_cmd_args documents scene_names as a required positional, but the
+  # proc (tcl/Sta.tcl) accepts 0 args via check_argc_eq0or1 and defaults to
+  # "*" - the doc string doesn't match the implementation here.
+  positionals:
+    - name: scene_names
+      required: false
+      value: {type: any}
+
+report_checks:
+  # OpenSTA's own test suite wraps this in helper procs that forward via
+  # `report_checks {*}$args ...` (e.g. test/set_path_margin1.tcl's setup_at).
+  # tclint can't statically expand `{*}$args`, so it conservatively counts it
+  # as one positional argument of unknown kind - which conflicts with the
+  # scraped "takes no positionals" spec (report_checks genuinely has no
+  # positional args of its own; this is purely to tolerate that forwarding
+  # idiom). value/type is irrelevant since it's never a real object here.
+  positionals:
+    - name: forwarded_args
+      required: false
+      value: {type: variadic}

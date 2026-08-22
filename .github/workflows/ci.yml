@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        # Add a line here for each new packages/<tool>/ as it's created.
+        package: [opensta]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[test]"
+        working-directory: packages/${{ matrix.package }}
+      - run: pytest
+        working-directory: packages/${{ matrix.package }}

@@ -1,0 +1,6539 @@
+{
+  "all_clocks": {
+    "positionals": [],
+    "switches": {}
+  },
+  "all_inputs": {
+    "positionals": [],
+    "switches": {
+      "-no_clocks": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "all_outputs": {
+    "positionals": [],
+    "switches": {}
+  },
+  "all_registers": {
+    "positionals": [],
+    "switches": {
+      "-async_pins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-cells": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_pins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-data_pins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-edge_triggered": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-level_sensitive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-output_pins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "check_setup": {
+    "positionals": [],
+    "switches": {
+      "-generated_clocks": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-loops": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-multiple_clock": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_clock": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_input_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_output_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-unconstrained_endpoints": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "create_clock": {
+    "positionals": [
+      {
+        "name": "pins",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-add": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-period": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-waveform": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "create_generated_clock": {
+    "positionals": [
+      {
+        "name": "port_pin_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-add": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-combinational": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-divide_by": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-duty_cycle": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-edge_shift": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-edges": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-invert": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-master_clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-multiply_by": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-source": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "create_voltage_area": {
+    "positionals": [
+      {
+        "name": "cells",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-coordinate": {
+        "metavar": "coordinates",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-guard_band_x": {
+        "metavar": "guard_x",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-guard_band_y": {
+        "metavar": "guard_y",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-name": {
+        "metavar": "name",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "current_design": {
+    "positionals": [
+      {
+        "name": "design",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "current_instance": {
+    "positionals": [
+      {
+        "name": "instance",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "define_corners": {
+    "positionals": [
+      {
+        "name": "corner1",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "corner2",
+        "required": false,
+        "value": {
+          "type": "variadic"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "delete_clock": {
+    "positionals": [
+      {
+        "name": "clocks",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-all": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "delete_from_list": {
+    "positionals": [
+      {
+        "name": "list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objs",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "delete_generated_clock": {
+    "positionals": [
+      {
+        "name": "clocks",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-all": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "elapsed_run_time": {
+    "positionals": [],
+    "switches": {}
+  },
+  "find_timing_paths": {
+    "positionals": [],
+    "switches": {
+      "-corner": {
+        "metavar": "corner",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-endpoint_path_count": {
+        "metavar": "path_count",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-group_path_count": {
+        "metavar": "path_count",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-path_delay": {
+        "metavar": "min",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-path_group": {
+        "metavar": "group_name",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-slack_max": {
+        "metavar": "slack_max",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-slack_min": {
+        "metavar": "slack_min",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-sort_by_slack": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-unconstrained": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-unique_edges_to_endpoint": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-unique_paths_to_endpoint": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_cell": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_cells": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_clock": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_clocks": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_fanin": {
+    "positionals": [],
+    "switches": {
+      "-flat": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-levels": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-only_cells": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pin_levels": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-startpoints_only": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-trace_arcs": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "get_fanout": {
+    "positionals": [],
+    "switches": {
+      "-endpoints_only": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-flat": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-levels": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-only_cells": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pin_levels": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-trace_arcs": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "get_full_name": {
+    "positionals": [
+      {
+        "name": "object",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "get_lib": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_lib_cell": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_lib_cells": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_lib_pin": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_lib_pins": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_libs": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_name": {
+    "positionals": [
+      {
+        "name": "object",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "get_net": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_nets": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_pin": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_pins": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hierarchical": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hsc": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_port": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_ports": {
+    "positionals": [
+      {
+        "name": "patterns",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-filter": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-nocase": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-of_objects": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-regexp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_property": {
+    "positionals": [
+      {
+        "name": "object",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "property",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-object_type": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-quiet": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "get_scenes": {
+    "positionals": [
+      {
+        "name": "scene_names",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ]
+  },
+  "get_timing_edges": {
+    "positionals": [],
+    "switches": {
+      "-filter": {
+        "metavar": "expr",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-of_objects": {
+        "metavar": "objects",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "group_path": {
+    "positionals": [],
+    "switches": {
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-critical_range": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-default": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-weight": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "help": {
+    "positionals": [
+      {
+        "name": "pattern",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "include": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-e": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-echo": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-encoding": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-v": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "link_design": {
+    "positionals": [
+      {
+        "name": "top_cell_name",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-no_black_boxes": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "log_begin": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "log_end": {
+    "positionals": [],
+    "switches": {}
+  },
+  "read_liberty": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-infer_latches": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "read_power_activities": {
+    "positionals": [],
+    "switches": {
+      "-scope": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-vcd": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "read_saif": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-scope": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "read_sdc": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-echo": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "read_sdf": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-analysis_type": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-cond_use": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-incremental_only": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-path": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-unescaped_dividers": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "read_spef": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-coupling_reduction_factor": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-delete_after_reduce": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-increment": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-keep_capacitive_coupling": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-path": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-pin_cap_included": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reduce": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "read_vcd": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-scope": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "read_verilog": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_activity_annotation": {
+    "positionals": [],
+    "switches": {
+      "-report_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-report_unannotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_annotated_check": {
+    "positionals": [],
+    "switches": {
+      "-constant_arcs": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-list_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-list_not_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_lines": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max_skew": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-nochange": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-period": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-recovery": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-removal": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-report_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-report_unannotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-width": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_annotated_delay": {
+    "positionals": [],
+    "switches": {
+      "-cell": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-constant_arcs": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-from_in_ports": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-list_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-list_not_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_lines": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-net": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-report_annotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-report_unannotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to_out_ports": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_arrival": {
+    "positionals": [
+      {
+        "name": "pin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_check_types": {
+    "positionals": [],
+    "switches": {
+      "-clock_gating_hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-clock_gating_setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-format": {
+        "metavar": "slack_only",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max_capacitance": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_fanout": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_skew": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max_slew": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_capacitance": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_fanout": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_period": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_pulse_width": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min_slew": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-net": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-no_line_splits": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-recovery": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-removal": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-violators": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_checks": {
+    "positionals": [
+      {
+        "name": "forwarded_args",
+        "required": false,
+        "value": {
+          "type": "variadic"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "metavar": "corner",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-endpoint_path_count": {
+        "metavar": "path_count",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fields": {
+        "metavar": "capacitance",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-format": {
+        "metavar": "full",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-group_path_count": {
+        "metavar": "path_count",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-no_line_splits": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-path_delay": {
+        "metavar": "min",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-path_group": {
+        "metavar": "group_name",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-slack_max": {
+        "metavar": "slack_max",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-slack_min": {
+        "metavar": "slack_min",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-sort_by_slack": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-unconstrained": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-unique_paths_to_endpoint": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_clock_latency": {
+    "positionals": [],
+    "switches": {
+      "-clock": {
+        "metavar": "clocks",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-corner": {
+        "metavar": "corner",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-include_internal_latency": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_clock_min_period": {
+    "positionals": [],
+    "switches": {
+      "-clocks": {
+        "metavar": "clocks",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-include_port_paths": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_clock_properties": {
+    "positionals": [
+      {
+        "name": "clocks",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_clock_skew": {
+    "positionals": [],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-include_internal_latency": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_constant": {
+    "positionals": [
+      {
+        "name": "pin|instance|net",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_dcalc": {
+    "positionals": [],
+    "switches": {
+      "-corner": {
+        "metavar": "corner",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "metavar": "to_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_disabled_edges": {
+    "positionals": [],
+    "switches": {}
+  },
+  "report_edges": {
+    "positionals": [],
+    "switches": {
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_instance": {
+    "positionals": [
+      {
+        "name": "instance_path",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-connections": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_lib_cell": {
+    "positionals": [
+      {
+        "name": "cell_name",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_net": {
+    "positionals": [
+      {
+        "name": "net_path",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-connections": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hier_pins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_object_full_names": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_object_names": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_parasitic_annotation": {
+    "positionals": [],
+    "switches": {
+      "-report_unannotated": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_path": {
+    "positionals": [
+      {
+        "name": "pin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "^|r|rise|v|f|fall",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-all": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fields": {
+        "metavar": "capacitance",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-format": {
+        "metavar": "full",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_line_splits": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-tags": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_power": {
+    "positionals": [],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-format": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-highest_power_instances": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-instances": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_pulse_width_checks": {
+    "positionals": [
+      {
+        "name": "pins",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "metavar": "digits",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-no_line_splits": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-verbose": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      ">": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      ">>": {
+        "metavar": "filename",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_required": {
+    "positionals": [
+      {
+        "name": "pin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_slack": {
+    "positionals": [
+      {
+        "name": "pin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "report_slews": {
+    "positionals": [
+      {
+        "name": "pin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "report_tns": {
+    "positionals": [],
+    "switches": {
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_units": {
+    "positionals": [],
+    "switches": {}
+  },
+  "report_wns": {
+    "positionals": [],
+    "switches": {
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "report_worst_slack": {
+    "positionals": [],
+    "switches": {
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_assigned_check": {
+    "positionals": [
+      {
+        "name": "check_value",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-cond": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-recovery": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-removal": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_assigned_delay": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-cell": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-net": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_assigned_transition": {
+    "positionals": [
+      {
+        "name": "slew",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "pins",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_case_analysis": {
+    "positionals": [
+      {
+        "name": "0|1|zero|one|rise|rising|fall|falling",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "pins",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_clock_gating_check": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-high": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-low": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_clock_groups": {
+    "positionals": [],
+    "switches": {
+      "-allow_paths": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-asynchronous": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-group": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-logically_exclusive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-physically_exclusive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_clock_latency": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-early": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-late": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-source": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_clock_sense": {
+    "positionals": [
+      {
+        "name": "pins",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "metavar": "clocks",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-negative": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-positive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pulse": {
+        "metavar": "pulse_type",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-stop_propagation": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_clock_transition": {
+    "positionals": [
+      {
+        "name": "transition",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "clocks",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_clock_uncertainty": {
+    "positionals": [
+      {
+        "name": "uncertainty",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_cmd_units": {
+    "positionals": [],
+    "switches": {
+      "-capacitance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-current": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-distance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-power": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-resistance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-suffix": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-time": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-voltage": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_data_check": {
+    "positionals": [
+      {
+        "name": "margin",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_disable_inferred_clock_gating": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_disable_timing": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_drive": {
+    "positionals": [
+      {
+        "name": "resistance",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "ports",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_driving_cell": {
+    "positionals": [
+      {
+        "name": "ports",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-cell": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-dont_scale": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-from_pin": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-input_transition_fall": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-input_transition_rise": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-lib_cell": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-multiply_by": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-no_design_rule": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pin": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_false_path": {
+    "positionals": [],
+    "switches": {
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reset_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_fanout_load": {
+    "positionals": [
+      {
+        "name": "fanout",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "ports",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_hierarchy_separator": {
+    "positionals": [
+      {
+        "name": "seperator",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_ideal_latency": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_ideal_net": {
+    "positionals": [
+      {
+        "name": "nets",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_ideal_network": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-no_propagation": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_ideal_transition": {
+    "positionals": [
+      {
+        "name": "transition_time",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_input_delay": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "port_pin_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-add_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-network_latency_included": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reference_pin": {
+        "metavar": "ref_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-source_latency_included": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_input_transition": {
+    "positionals": [
+      {
+        "name": "transition",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "ports",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_level_shifter_strategy": {
+    "positionals": [],
+    "switches": {
+      "-rule": {
+        "metavar": "rule_type",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_level_shifter_threshold": {
+    "positionals": [],
+    "switches": {
+      "-voltage": {
+        "metavar": "volt",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_load": {
+    "positionals": [
+      {
+        "name": "capacitance",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pin_load": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-subtract_pin_load": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-wire_load": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_logic_dc": {
+    "positionals": [
+      {
+        "name": "port_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_logic_one": {
+    "positionals": [
+      {
+        "name": "port_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_logic_zero": {
+    "positionals": [
+      {
+        "name": "port_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_area": {
+    "positionals": [
+      {
+        "name": "area",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_capacitance": {
+    "positionals": [
+      {
+        "name": "cap",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_delay": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-comment": {
+        "metavar": "comment",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-ignore_clock_latency": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-probe": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reset_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_max_dynamic_power": {
+    "positionals": [
+      {
+        "name": "power",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "unit",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_fanout": {
+    "positionals": [
+      {
+        "name": "fanout",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_leakage_power": {
+    "positionals": [
+      {
+        "name": "power",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "unit",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_time_borrow": {
+    "positionals": [
+      {
+        "name": "limit",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_max_transition": {
+    "positionals": [
+      {
+        "name": "slew",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-data_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_min_capacitance": {
+    "positionals": [
+      {
+        "name": "cap",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_min_delay": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-comment": {
+        "metavar": "comment",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-ignore_clock_latency": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-probe": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reset_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_min_pulse_width": {
+    "positionals": [
+      {
+        "name": "value",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-high": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-low": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_multicycle_path": {
+    "positionals": [
+      {
+        "name": "path_multiplier",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-comment": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-end": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reset_path": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-start": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_operating_conditions": {
+    "positionals": [
+      {
+        "name": "condition",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-analysis_type": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max_library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-min_library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_output_delay": {
+    "positionals": [
+      {
+        "name": "delay",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "port_pin_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-add_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-network_latency_included": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-reference_pin": {
+        "metavar": "ref_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-source_latency_included": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_pocv_sigma_factor": {
+    "positionals": [
+      {
+        "name": "factor",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_port_fanout_number": {
+    "positionals": [
+      {
+        "name": "fanout",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "ports",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_power_activity": {
+    "positionals": [],
+    "switches": {
+      "-activity": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-density": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-duty": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-global": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-input": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-input_ports": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-pins": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_propagated_clock": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_pvt": {
+    "positionals": [
+      {
+        "name": "insts",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-process": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-temperature": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-voltage": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_resistance": {
+    "positionals": [
+      {
+        "name": "resistance",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "nets",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_sense": {
+    "positionals": [
+      {
+        "name": "pins",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clocks": {
+        "metavar": "clocks",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-negative": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-positive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-pulse": {
+        "metavar": "pulse_type",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-stop_propagation": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-type": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_timing_derate": {
+    "positionals": [
+      {
+        "name": "derate",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-cell_check": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-cell_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-data": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-early": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-late": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-net_delay": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "set_units": {
+    "positionals": [],
+    "switches": {
+      "-capacitance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-current": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-distance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-power": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-resistance": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-time": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-voltage": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_voltage": {
+    "positionals": [
+      {
+        "name": "max_case_voltage",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-object_list": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_wire_load_min_block_size": {
+    "positionals": [
+      {
+        "name": "block_size",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "set_wire_load_model": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "set_wire_load_selection_group": {
+    "positionals": [
+      {
+        "name": "group_name",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-library": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "unset_case_analysis": {
+    "positionals": [
+      {
+        "name": "pins",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "unset_clock_groups": {
+    "positionals": [],
+    "switches": {
+      "-all": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-asynchronous": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-logically_exclusive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-name": {
+        "metavar": "names",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-physically_exclusive": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "unset_clock_latency": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-source": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "unset_clock_transition": {
+    "positionals": [
+      {
+        "name": "clocks",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "unset_clock_uncertainty": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "metavar": "from_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "metavar": "from_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "metavar": "to_clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "unset_data_check": {
+    "positionals": [],
+    "switches": {
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_from": {
+        "metavar": "from_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "metavar": "from_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-to": {
+        "metavar": "to_pin",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "unset_disable_inferred_clock_gating": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "unset_disable_timing": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-from": {
+        "metavar": "from_port",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_port",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "unset_input_delay": {
+    "positionals": [
+      {
+        "name": "port_pin_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "unset_output_delay": {
+    "positionals": [
+      {
+        "name": "port_pin_list",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-clock": {
+        "metavar": "clock",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-clock_fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  },
+  "unset_path_exceptions": {
+    "positionals": [],
+    "switches": {
+      "-fall": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-fall_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-fall_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-hold": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-rise_from": {
+        "metavar": "from_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-rise_to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-setup": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-through": {
+        "metavar": "through_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-to": {
+        "metavar": "to_list",
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "unset_power_activity": {
+    "positionals": [],
+    "switches": {
+      "-clock": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-global": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-input": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-input_ports": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-pins": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "unset_propagated_clock": {
+    "positionals": [
+      {
+        "name": "objects",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "unset_timing_derate": {
+    "positionals": [],
+    "switches": {}
+  },
+  "user_run_time": {
+    "positionals": [],
+    "switches": {}
+  },
+  "with_output_to_variable": {
+    "positionals": [
+      {
+        "name": "var",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      },
+      {
+        "name": "{ cmds }",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {}
+  },
+  "write_gate_gnuplot": {
+    "positionals": [],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-gates": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-plot_basename": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-plot_pins": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-spice_waveforms": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_gate_spice": {
+    "positionals": [],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-gates": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-ground": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-lib_subckt_file": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-max": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-measure_stmts": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-min": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-model_file": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-power": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-simulator": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-spice_filename": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_path_spice": {
+    "positionals": [],
+    "switches": {
+      "-ground": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-lib_subckt_file": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-model_file": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-path_args": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-power": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-simulator": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-spice_directory": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_sdc": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-compatible": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-gzip": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-map_hpins": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_timestamp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-significant_digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_sdf": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-divider": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-gzip": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-include_typ": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_timestamp": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-no_version": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-significant_digits": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_timing_model": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-cell_name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-corner": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-library_name": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      }
+    }
+  },
+  "write_verilog": {
+    "positionals": [
+      {
+        "name": "filename",
+        "required": true,
+        "value": {
+          "type": "any"
+        }
+      }
+    ],
+    "switches": {
+      "-include_pwr_gnd": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      },
+      "-remove_cells": {
+        "repeated": false,
+        "required": false,
+        "value": {
+          "type": "any"
+        }
+      },
+      "-sort": {
+        "repeated": false,
+        "required": false,
+        "value": null
+      }
+    }
+  }
+}
