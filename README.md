@@ -8,3 +8,4 @@ Open-source EDA tool plugins for [tclint](https://github.com/nmoroze/tclint).
 ## TODO Tools
 - OpenROAD
 - VTR (Verilog-to-Routing)'s Tatum STA Engine
+- OpenTimer
