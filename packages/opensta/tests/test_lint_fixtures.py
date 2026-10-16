@@ -16,6 +16,8 @@ VALID = [
     "all_registers -clock [get_clocks clk]",
     "report_checks -path_delay max -digits 4",
     "define_corners fast slow typical",
+    "set_clock_groups -asynchronous -group {clk_core} -group {clk_io}",
+    "set_clock_groups -name g -logically_exclusive -group [get_clocks a] -group [get_clocks b] -group c",
 ]
 
 INVALID = [
@@ -28,6 +30,8 @@ INVALID = [
     "group_path -name reg2reg -not_a_real_switch foo",
     # get_cells: unknown switch
     "get_cells -not_a_real_switch foo *",
+    # set_clock_groups: -group still requires a value
+    "set_clock_groups -asynchronous -group",
 ]
 
 

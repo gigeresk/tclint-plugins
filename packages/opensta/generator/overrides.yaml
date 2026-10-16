@@ -31,3 +31,14 @@ report_checks:
     - name: forwarded_args
       required: false
       value: {type: variadic}
+
+set_clock_groups:
+  # -group isn't in parse_key_args' keys list: after parse_key_args, the proc
+  # walks the remaining args itself, consuming each `-group <clocks>` pair
+  # (sdc/Sdc.tcl). The scraper only sees it in the usage string, so it comes
+  # out as a non-repeated flag. In SDC, -group takes a clock list and is
+  # repeated once per group (`-group {a} -group {b}`).
+  switches:
+    -group:
+      repeated: true
+      value: {type: any}
