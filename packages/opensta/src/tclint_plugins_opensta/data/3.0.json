@@ -3633,9 +3633,11 @@
         }
       },
       "-group": {
-        "repeated": false,
+        "repeated": true,
         "required": false,
-        "value": null
+        "value": {
+          "type": "any"
+        }
       },
       "-logically_exclusive": {
         "repeated": false,
