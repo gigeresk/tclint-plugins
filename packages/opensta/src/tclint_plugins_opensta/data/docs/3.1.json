@@ -1,0 +1,509 @@
+{
+  "all_clocks": {
+    "usage": "all_clocks"
+  },
+  "all_inputs": {
+    "usage": "all_inputs [-no_clocks]"
+  },
+  "all_outputs": {
+    "usage": "all_outputs"
+  },
+  "all_registers": {
+    "usage": "all_registers [-clock clocks] [-rise_clock clocks] [-fall_clock clocks] [-cells] [-data_pins] [-clock_pins] [-async_pins] [-output_pins] [-level_sensitive] [-edge_triggered]"
+  },
+  "check_setup": {
+    "usage": "check_setup [-verbose] [-no_input_delay] [-no_output_delay] [-multiple_clock] [-no_clock] [-unconstrained_endpoints] [-loops] [-generated_clocks] [> filename] [>> filename]"
+  },
+  "create_clock": {
+    "usage": "create_clock [-name name] [-period period] [-waveform waveform] [-add] [-comment comment] [pins]"
+  },
+  "create_generated_clock": {
+    "usage": "create_generated_clock [-name clock_name] -source master_pin [-master_clock clock] [-divide_by divisor | -multiply_by multiplier] [-duty_cycle duty_cycle] [-invert] [-edges edge_list] [-edge_shift edge_shift_list] [-combinational] [-add] [-comment comment] port_pin_list"
+  },
+  "create_voltage_area": {
+    "usage": "create_voltage_area [-name name] [-coordinate coordinates] [-guard_band_x guard_x] [-guard_band_y guard_y] cells"
+  },
+  "current_design": {
+    "usage": "current_design [design]"
+  },
+  "current_instance": {
+    "usage": "current_instance [instance]"
+  },
+  "define_corners": {
+    "usage": "define_corners corner1 [corner2]..."
+  },
+  "define_property": {
+    "usage": "define_property -object_type scene|mode|library|liberty_library|cell|liberty_cell|port|liberty_port|instance|pin|net|clock -type bool|float|string property"
+  },
+  "define_scene": {
+    "usage": "define_scene name -mode mode_name -liberty liberty_files | -liberty_min liberty_min_files -liberty_max liberty_max_files [-spef spef_file | -spef_min spef_min_file -spef_max spef_max_file]"
+  },
+  "delete_clock": {
+    "usage": "delete_clock [-all] clocks"
+  },
+  "delete_from_list": {
+    "usage": "delete_from_list list delete"
+  },
+  "delete_generated_clock": {
+    "usage": "delete_generated_clock [-all] clocks"
+  },
+  "elapsed_run_time": {
+    "usage": "elapsed_run_time"
+  },
+  "find_timing_paths": {
+    "usage": "find_timing_paths [-from from_list|-rise_from from_list|-fall_from from_list] [-through through_list|-rise_through through_list|-fall_through through_list] [-to to_list|-rise_to to_list|-fall_to to_list] [-path_delay min|min_rise|min_fall|max|max_rise|max_fall|min_max] [-unconstrained] [-scenes scenes] [-group_path_count path_count] [-endpoint_path_count path_count] [-unique_paths_to_endpoint] [-unique_edges_to_endpoint] [-slack_max slack_max] [-slack_min slack_min] [-sort_by_slack] [-path_group group_name]"
+  },
+  "get_cell": {
+    "usage": "get_cell [-hierarchical] [-hsc separator] [-filter expr] [-regexp] [-nocase] [-quiet] [-of_objects objects] [patterns]"
+  },
+  "get_cells": {
+    "usage": "get_cells [-hierarchical] [-hsc separator] [-filter expr] [-regexp] [-nocase] [-quiet] [-of_objects objects] [patterns]"
+  },
+  "get_clock": {
+    "usage": "get_clock [-regexp] [-nocase] [-quiet] [-filter expr] [patterns]"
+  },
+  "get_clocks": {
+    "usage": "get_clocks [-regexp] [-nocase] [-quiet] [-filter expr] [patterns]"
+  },
+  "get_fanin": {
+    "usage": "get_fanin -to sink_list [-flat] [-only_cells] [-startpoints_only] [-levels level_count] [-pin_levels pin_count] [-trace_arcs timing|enabled|all]"
+  },
+  "get_fanout": {
+    "usage": "get_fanout -from source_list [-flat] [-only_cells] [-endpoints_only] [-levels level_count] [-pin_levels pin_count] [-trace_arcs timing|enabled|all]"
+  },
+  "get_full_name": {
+    "usage": "get_full_name object"
+  },
+  "get_lib": {
+    "usage": "get_lib [-regexp] [-nocase] [-quiet] [-filter expr] [patterns]"
+  },
+  "get_lib_cell": {
+    "usage": "get_lib_cell [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_lib_cells": {
+    "usage": "get_lib_cells [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_lib_pin": {
+    "usage": "get_lib_pin [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_lib_pins": {
+    "usage": "get_lib_pins [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_libs": {
+    "usage": "get_libs [-regexp] [-nocase] [-quiet] [-filter expr] [patterns]"
+  },
+  "get_modes": {
+    "usage": "get_modes [-filter expr] [mode_name]"
+  },
+  "get_name": {
+    "usage": "get_name object"
+  },
+  "get_net": {
+    "usage": "get_net [-hierarchical] [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_nets": {
+    "usage": "get_nets [-hierarchical] [-hsc separator] [-regexp] [-nocase] [-quiet] [-filter expr] [-of_objects objects] [patterns]"
+  },
+  "get_pin": {
+    "usage": "get_pin [-hierarchical] [-hsc separator] [-quiet] [-filter expr] [-regexp] [-nocase] [-of_objects objects] [patterns]"
+  },
+  "get_pins": {
+    "usage": "get_pins [-hierarchical] [-hsc separator] [-quiet] [-filter expr] [-regexp] [-nocase] [-of_objects objects] [patterns]"
+  },
+  "get_port": {
+    "usage": "get_port [-quiet] [-filter expr] [-regexp] [-nocase] [-of_objects objects] [patterns]"
+  },
+  "get_ports": {
+    "usage": "get_ports [-quiet] [-filter expr] [-regexp] [-nocase] [-of_objects objects] [patterns]"
+  },
+  "get_property": {
+    "usage": "get_property [-object_type library|liberty_library|cell|liberty_cell|instance|pin|net|port|clock|timing_arc] object property"
+  },
+  "get_scenes": {
+    "usage": "get_scenes [-modes mode_names] [-filter expr] scene_names"
+  },
+  "get_timing_edges": {
+    "usage": "get_timing_edges [-from from_pin] [-to to_pin] [-of_objects objects] [-filter expr]"
+  },
+  "group_path": {
+    "usage": "group_path -name group_name [-weight weight] [-critical_range range] [-default] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list]"
+  },
+  "help": {
+    "usage": "help [pattern]"
+  },
+  "include": {
+    "usage": "include [-e|-echo] [-v|-verbose] filename [> filename] [>> filename]"
+  },
+  "link_design": {
+    "usage": "link_design [-no_black_boxes] [top_cell_name]"
+  },
+  "log_begin": {
+    "usage": "log_begin filename"
+  },
+  "log_end": {
+    "usage": "log_end"
+  },
+  "read_liberty": {
+    "usage": "read_liberty [-corner corner] [-min] [-max] [-infer_latches] filename"
+  },
+  "read_power_activities": {
+    "usage": "read_power_activities [-scope scope] -vcd filename"
+  },
+  "read_saif": {
+    "usage": "read_saif [-scope scope] filename"
+  },
+  "read_sdc": {
+    "usage": "read_sdc [-echo] [-mode mode_name] filename"
+  },
+  "read_sdf": {
+    "usage": "read_sdf [-path path] [-scene scene] [-cond_use min|max|min_max] [-unescaped_dividers] filename"
+  },
+  "read_spef": {
+    "usage": "read_spef [-name spef_name] [-corner corner] [-min] [-max] [-path path] [-pin_cap_included] [-keep_capacitive_coupling] [-coupling_reduction_factor factor] [-reduce] filename"
+  },
+  "read_vcd": {
+    "usage": "read_vcd [-scope scope] [-mode mode_name] [-begin_time begin_time] [-end_time end_time] filename"
+  },
+  "read_verilog": {
+    "usage": "read_verilog filename"
+  },
+  "report_activity_annotation": {
+    "usage": "report_activity_annotation [-report_unannotated] [-report_annotated]"
+  },
+  "report_annotated_check": {
+    "usage": "report_annotated_check [-setup] [-hold] [-recovery] [-removal] [-nochange] [-width] [-period] [-max_skew] [-scene scene] [-max_lines lines] [-report_annotated] [-report_unannotated] [-constant_arcs]"
+  },
+  "report_annotated_delay": {
+    "usage": "report_annotated_delay [-cell] [-net] [-from_in_ports] [-to_out_ports] [-scene scene] [-max_lines lines] [-report_annotated] [-report_unannotated] [-constant_arcs]"
+  },
+  "report_arrival": {
+    "usage": "report_arrival [-scene scene] [-report_variance] [-digits digits] pin"
+  },
+  "report_check_types": {
+    "usage": "report_check_types [-scenes scenes] [-violators] [-verbose] [-format slack_only|end] [-max_delay] [-min_delay] [-recovery] [-removal] [-clock_gating_setup] [-clock_gating_hold] [-max_slew] [-min_slew] [-max_fanout] [-min_fanout] [-max_capacitance] [-min_capacitance] [-min_pulse_width] [-min_period] [-max_skew] [-net net] [-max_count max_count] [-digits digits] [-no_line_splits] [> filename] [>> filename]"
+  },
+  "report_checks": {
+    "usage": "report_checks [-from from_list|-rise_from from_list|-fall_from from_list] [-through through_list|-rise_through through_list|-fall_through through_list] [-to to_list|-rise_to to_list|-fall_to to_list] [-unconstrained] [-path_delay min|min_rise|min_fall|max|max_rise|max_fall|min_max] [-scenes scenes] [-group_path_count path_count] [-endpoint_path_count path_count] [-unique_paths_to_endpoint] [-slack_max slack_max] [-slack_min slack_min] [-sort_by_slack] [-path_group group_name] [-format full|full_clock|full_clock_expanded|short|end|slack_only|summary|json] [-fields capacitance|slew|fanout|input_pin|net|src_attr|variation] [-digits digits] [-no_line_splits] [> filename] [>> filename]"
+  },
+  "report_clock_latency": {
+    "usage": "report_clock_latency [-clocks clocks] [-scenes scene] [-include_internal_latency] [-digits digits]"
+  },
+  "report_clock_min_period": {
+    "usage": "report_clock_min_period [-clocks clocks] [-include_port_paths]"
+  },
+  "report_clock_properties": {
+    "usage": "report_clock_properties [clocks]"
+  },
+  "report_clock_skew": {
+    "usage": "report_clock_skew [-setup|-hold] [-clocks clocks] [-scenes scenes] [-include_internal_latency] [-digits digits]"
+  },
+  "report_constant": {
+    "usage": "report_constant pin|instance|net"
+  },
+  "report_dcalc": {
+    "usage": "report_dcalc [-from from_pin] [-to to_pin] [-scene scene] [-min] [-max] [-digits digits]"
+  },
+  "report_disabled_edges": {
+    "usage": "report_disabled_edges"
+  },
+  "report_edges": {
+    "usage": "report_edges [-from from_pin] [-to to_pin] [-digits digits] [-report_variance]"
+  },
+  "report_instance": {
+    "usage": "report_instance [-connections] [-verbose] instance_path [> filename] [>> filename]"
+  },
+  "report_lib_cell": {
+    "usage": "report_lib_cell cell_name [> filename] [>> filename]"
+  },
+  "report_net": {
+    "usage": "report_net [-scene scene] [-digits digits] net_path [> filename] [>> filename]"
+  },
+  "report_object_full_names": {
+    "usage": "report_object_full_names objects"
+  },
+  "report_object_names": {
+    "usage": "report_object_names objects"
+  },
+  "report_parasitic_annotation": {
+    "usage": "report_parasitic_annotation [-name spef_name] [-report_unannotated]"
+  },
+  "report_path": {
+    "usage": "report_path [-min|-max] [-format full|full_clock|full_clock_expanded|short|end|summary] [-fields capacitance|slew|input_pin|net|src_attr] [-digits digits] [-no_line_splits] [> filename] [>> filename] pin ^|r|rise|v|f|fall"
+  },
+  "report_power": {
+    "usage": "report_power [-instances instances] [-highest_power_instances count] [-scene scene] [-digits digits] [-format format] [> filename] [>> filename]"
+  },
+  "report_required": {
+    "usage": "report_required [-scene scene] [-report_variance] [-digits digits] pin"
+  },
+  "report_slack": {
+    "usage": "report_slack [-scene scene] [-report_variance] [-digits digits] pin"
+  },
+  "report_slews": {
+    "usage": "report_slews [-scenes scenes] [-digits digits] [-report_variance] pin"
+  },
+  "report_tns": {
+    "usage": "report_tns [-min] [-max] [-digits digits]"
+  },
+  "report_units": {
+    "usage": "report_units"
+  },
+  "report_wns": {
+    "usage": "report_wns [-min] [-max] [-digits digits]"
+  },
+  "report_worst_slack": {
+    "usage": "report_worst_slack [-min] [-max] [-digits digits]"
+  },
+  "set_assigned_check": {
+    "usage": "set_assigned_check -setup|-hold|-recovery|-removal [-rise] [-fall] [-scene scene] [-min] [-max] [-from from_pins] [-to to_pins] [-clock rise|fall] [-cond sdf_cond] check_value"
+  },
+  "set_assigned_delay": {
+    "usage": "set_assigned_delay -cell|-net [-rise] [-fall] [-scene scene] [-min] [-max] [-from from_pins] [-to to_pins] delay"
+  },
+  "set_assigned_transition": {
+    "usage": "set_assigned_transition [-rise] [-fall] [-scene scene] [-min] [-max] slew pins"
+  },
+  "set_case_analysis": {
+    "usage": "set_case_analysis 0|1|zero|one|rise|rising|fall|falling pins"
+  },
+  "set_clock_gating_check": {
+    "usage": "set_clock_gating_check [-setup setup_time] [-hold hold_time] [-rise] [-fall] [-low] [-high] [objects]"
+  },
+  "set_clock_groups": {
+    "usage": "set_clock_groups [-name name] [-logically_exclusive] [-physically_exclusive] [-asynchronous] [-allow_paths] [-comment comment] -group clocks"
+  },
+  "set_clock_latency": {
+    "usage": "set_clock_latency [-source] [-clock clock] [-rise] [-fall] [-min] [-max] [-early] [-late] delay objects"
+  },
+  "set_clock_sense": {
+    "usage": "set_clock_sense [-positive] [-negative] [-pulse pulse_type] [-stop_propagation] [-clock clocks] pins"
+  },
+  "set_clock_transition": {
+    "usage": "set_clock_transition [-rise] [-fall] [-min] [-max] transition clocks"
+  },
+  "set_clock_uncertainty": {
+    "usage": "set_clock_uncertainty [-from|-rise_from|-fall_from from_clock] [-to|-rise_to|-fall_to to_clock] [-rise] [-fall] [-setup] [-hold] uncertainty [objects]"
+  },
+  "set_cmd_units": {
+    "usage": "set_cmd_units [-capacitance cap_unit] [-resistance res_unit] [-time time_unit] [-voltage voltage_unit] [-current current_unit] [-power power_unit] [-distance distance_unit]"
+  },
+  "set_data_check": {
+    "usage": "set_data_check [-from from_pin] [-rise_from from_pin] [-fall_from from_pin] [-to to_pin] [-rise_to to_pin] [-fall_to to_pin] [-setup | -hold] [-clock clock] margin"
+  },
+  "set_disable_inferred_clock_gating": {
+    "usage": "set_disable_inferred_clock_gating objects"
+  },
+  "set_disable_timing": {
+    "usage": "set_disable_timing [-from from_port] [-to to_port] objects"
+  },
+  "set_drive": {
+    "usage": "set_drive [-rise] [-fall] [-min] [-max] resistance ports"
+  },
+  "set_driving_cell": {
+    "usage": "set_driving_cell [-lib_cell cell] [-library library] [-rise] [-fall] [-min] [-max] [-pin pin] [-from_pin from_pin] [-input_transition_rise trans_rise] [-input_transition_fall trans_fall] [-multiply_by factor] [-dont_scale] [-no_design_rule] ports"
+  },
+  "set_false_path": {
+    "usage": "set_false_path [-setup] [-hold] [-rise] [-fall] [-reset_path] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list]"
+  },
+  "set_fanout_load": {
+    "usage": "set_fanout_load fanout ports"
+  },
+  "set_hierarchy_separator": {
+    "usage": "set_hierarchy_separator seperator"
+  },
+  "set_ideal_latency": {
+    "usage": "set_ideal_latency [-rise] [-fall] [-min] [-max] delay objects"
+  },
+  "set_ideal_net": {
+    "usage": "set_ideal_net nets"
+  },
+  "set_ideal_network": {
+    "usage": "set_ideal_network [-no_propagation] objects"
+  },
+  "set_ideal_transition": {
+    "usage": "set_ideal_transition [-rise] [-fall] [-min] [-max] transition_time objects"
+  },
+  "set_input_delay": {
+    "usage": "set_input_delay [-rise] [-fall] [-max] [-min] [-clock clock] [-clock_fall] [-reference_pin ref_pin] [-source_latency_included] [-network_latency_included] [-add_delay] delay port_pin_list"
+  },
+  "set_input_transition": {
+    "usage": "set_input_transition [-rise] [-fall] [-min] [-max] transition ports"
+  },
+  "set_level_shifter_strategy": {
+    "usage": "set_level_shifter_strategy [-rule rule_type]"
+  },
+  "set_level_shifter_threshold": {
+    "usage": "set_level_shifter_threshold [-voltage volt]"
+  },
+  "set_load": {
+    "usage": "set_load [-rise] [-fall] [-max] [-min] [-subtract_pin_load] [-pin_load] [-wire_load] capacitance objects"
+  },
+  "set_logic_dc": {
+    "usage": "set_logic_dc port_list"
+  },
+  "set_logic_one": {
+    "usage": "set_logic_one port_list"
+  },
+  "set_logic_zero": {
+    "usage": "set_logic_zero port_list"
+  },
+  "set_max_area": {
+    "usage": "set_max_area area"
+  },
+  "set_max_capacitance": {
+    "usage": "set_max_capacitance cap objects"
+  },
+  "set_max_delay": {
+    "usage": "set_max_delay [-rise] [-fall] [-ignore_clock_latency] [-reset_path] [-probe] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list] delay"
+  },
+  "set_max_dynamic_power": {
+    "usage": "set_max_dynamic_power power [unit]"
+  },
+  "set_max_fanout": {
+    "usage": "set_max_fanout fanout objects"
+  },
+  "set_max_leakage_power": {
+    "usage": "set_max_leakage_power power [unit]"
+  },
+  "set_max_time_borrow": {
+    "usage": "set_max_time_borrow limit objects"
+  },
+  "set_max_transition": {
+    "usage": "set_max_transition [-clock_path] [-data_path] [-rise] [-fall] slew objects"
+  },
+  "set_min_capacitance": {
+    "usage": "set_min_capacitance cap objects"
+  },
+  "set_min_delay": {
+    "usage": "set_min_delay [-rise] [-fall] [-ignore_clock_latency] [-reset_path] [-probe] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list] delay"
+  },
+  "set_min_pulse_width": {
+    "usage": "set_min_pulse_width [-low] [-high] value [objects]"
+  },
+  "set_mode": {
+    "usage": "set_mode mode_name"
+  },
+  "set_multicycle_path": {
+    "usage": "set_multicycle_path [-setup] [-hold] [-rise] [-fall] [-start] [-end] [-reset_path] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list] path_multiplier"
+  },
+  "set_operating_conditions": {
+    "usage": "set_operating_conditions [-analysis_type single|bc_wc|on_chip_variation] [-library lib] [condition] [-min min_condition] [-max max_condition] [-min_library min_lib] [-max_library max_lib]"
+  },
+  "set_output_delay": {
+    "usage": "set_output_delay [-rise] [-fall] [-max] [-min] [-clock clock] [-clock_fall] [-reference_pin ref_pin] [-source_latency_included] [-network_latency_included] [-add_delay] delay port_pin_list"
+  },
+  "set_path_margin": {
+    "usage": "set_path_margin [-setup] [-hold] [-rise] [-fall] [-comment comment] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through|-thr|-th through_list] [-rise_through|-rise_thr|-rise_th through_list] [-fall_through|-fall_thr|-fall_th through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list] margin"
+  },
+  "set_port_fanout_number": {
+    "usage": "set_port_fanout_number [-max] [-min] fanout ports"
+  },
+  "set_power_activity": {
+    "usage": "set_power_activity [-global] [-input] [-input_ports ports] [-pins pins] [-activity activity | -density density] [-duty duty] [-clock clock]"
+  },
+  "set_propagated_clock": {
+    "usage": "set_propagated_clock objects"
+  },
+  "set_property": {
+    "usage": "set_property object property value"
+  },
+  "set_pvt": {
+    "usage": "set_pvt insts [-min] [-max] [-process process] [-voltage voltage] [-temperature temperature]"
+  },
+  "set_resistance": {
+    "usage": "set_resistance [-min] [-max] resistance nets"
+  },
+  "set_scene": {
+    "usage": "set_scene scene_name"
+  },
+  "set_sense": {
+    "usage": "set_sense [-type clock|data] [-positive] [-negative] [-pulse pulse_type] [-stop_propagation] [-clocks clocks] pins"
+  },
+  "set_timing_derate": {
+    "usage": "set_timing_derate -early|-late [-rise] [-fall] [-clock] [-data] [-net_delay] [-cell_delay] [-cell_check] derate [objects]"
+  },
+  "set_units": {
+    "usage": "set_units [-time time_unit] [-capacitance cap_unit] [-resistance res_unit] [-voltage voltage_unit] [-current current_unit] [-power power_unit] [-distance distance_unit]"
+  },
+  "set_voltage": {
+    "usage": "set_voltage [-min min_case_value] [-object_list power_nets] max_case_voltage"
+  },
+  "set_wire_load_min_block_size": {
+    "usage": "set_wire_load_min_block_size block_size"
+  },
+  "set_wire_load_model": {
+    "usage": "set_wire_load_model -name model_name [-library lib_name] [-min] [-max] [objects]"
+  },
+  "set_wire_load_selection_group": {
+    "usage": "set_wire_load_selection_group [-library lib] [-min] [-max] group_name [objects]"
+  },
+  "unset_case_analysis": {
+    "usage": "unset_case_analysis pins"
+  },
+  "unset_clock_groups": {
+    "usage": "unset_clock_groups [-logically_exclusive] [-physically_exclusive] [-asynchronous] [-name names] [-all]"
+  },
+  "unset_clock_latency": {
+    "usage": "unset_clock_latency [-source] [-clock clock] objects"
+  },
+  "unset_clock_transition": {
+    "usage": "unset_clock_transition clocks"
+  },
+  "unset_clock_uncertainty": {
+    "usage": "unset_clock_uncertainty [-from|-rise_from|-fall_from from_clock] [-to|-rise_to|-fall_to to_clock] [-rise] [-fall] [-setup] [-hold] [objects]"
+  },
+  "unset_data_check": {
+    "usage": "unset_data_check [-from from_pin] [-rise_from from_pin] [-fall_from from_pin] [-to to_pin] [-rise_to to_pin] [-fall_to to_pin] [-setup | -hold] [-clock clock]"
+  },
+  "unset_disable_inferred_clock_gating": {
+    "usage": "unset_disable_inferred_clock_gating objects"
+  },
+  "unset_disable_timing": {
+    "usage": "unset_disable_timing [-from from_port] [-to to_port] objects"
+  },
+  "unset_input_delay": {
+    "usage": "unset_input_delay [-rise] [-fall] [-max] [-min] [-clock clock] [-clock_fall] port_pin_list"
+  },
+  "unset_output_delay": {
+    "usage": "unset_output_delay [-rise] [-fall] [-max] [-min] [-clock clock] [-clock_fall] port_pin_list"
+  },
+  "unset_path_exceptions": {
+    "usage": "unset_path_exceptions [-setup] [-hold] [-rise] [-fall] [-from from_list] [-rise_from from_list] [-fall_from from_list] [-through through_list] [-rise_through through_list] [-fall_through through_list] [-to to_list] [-rise_to to_list] [-fall_to to_list]"
+  },
+  "unset_power_activity": {
+    "usage": "unset_power_activity [-global] [-input] [-input_ports ports] [-pins pins] [-clock clock]"
+  },
+  "unset_propagated_clock": {
+    "usage": "unset_propagated_clock objects"
+  },
+  "unset_timing_derate": {
+    "usage": "unset_timing_derate"
+  },
+  "user_run_time": {
+    "usage": "user_run_time"
+  },
+  "with_output_to_variable": {
+    "usage": "with_output_to_variable var { cmds }"
+  },
+  "write_gate_gnuplot": {
+    "usage": "write_gate_gnuplot -gates {{instance input_port driver_port edge [delay]}...} -plot_pins plot_pins -plot_basename plot_basename [-scene scene] [-min] [-max]"
+  },
+  "write_gate_spice": {
+    "usage": "write_gate_spice -gates {{instance input_port driver_port edge [delay]}...} -spice_filename spice_filename -lib_subckt_file lib_subckts_file -model_file model_file -power power -ground ground [-simulator hspice|ngspice|xyce] [-scene scene] [-min] [-max]"
+  },
+  "write_path_spice": {
+    "usage": "write_path_spice -path_args path_args -spice_file spice_file -lib_subckt_file lib_subckts_file -model_file model_file -power power -ground ground [-simulator hspice|ngspice|xyce]"
+  },
+  "write_sdc": {
+    "usage": "write_sdc [-mode mode] [-map_hpins] [-digits digits] [-gzip] [-no_timestamp] filename"
+  },
+  "write_sdf": {
+    "usage": "write_sdf [-scene scene] [-divider /|.] [-include_typ] [-digits digits] [-gzip] [-no_timestamp] [-no_version] filename"
+  },
+  "write_timing_model": {
+    "usage": "write_timing_model [-scene scene] [-library_name lib_name] [-cell_name cell_name] filename"
+  },
+  "write_verilog": {
+    "usage": "write_verilog [-include_pwr_gnd] [-remove_cells cells] filename"
+  }
+}

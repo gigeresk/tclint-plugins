@@ -273,10 +273,18 @@ def load_overrides(path):
         return yaml.safe_load(f) or {}
 
 
+def normalize_usage(usage):
+    """Collapses a define_cmd_args usage string (which spans continuation lines
+    in the source) onto one line."""
+    return " ".join(usage.replace("\\\n", " ").split())
+
+
 def generate(repo, source_files=SOURCE_FILES):
-    """Returns a dict of command name -> spec (or None), for every command
-    documented via `define_cmd_args` across `source_files`."""
+    """Returns (commands, docs) for every command documented via
+    `define_cmd_args` across `source_files`: commands maps name -> spec (or None),
+    docs maps name -> {"usage": <usage string>}."""
     commands = {}
+    docs = {}
     for rel in source_files:
         path = repo / rel
         if not path.exists():
@@ -288,10 +296,12 @@ def generate(repo, source_files=SOURCE_FILES):
             body = extract_proc_body(text, name)
             keys, flags = extract_key_args(body, name) if body is not None else ([], [])
             commands[name] = build_command_spec(name, usage, keys, flags)
+            docs[name] = {"usage": f"{name} {normalize_usage(usage)}".strip()}
         for alias, target in extract_aliases(text).items():
             if target in usages:
                 commands[alias] = commands[target]
-    return commands
+                docs[alias] = {"usage": f"{alias} {normalize_usage(usages[target])}".strip()}
+    return commands, docs
 
 
 def apply_overrides(commands, overrides):
@@ -300,8 +310,10 @@ def apply_overrides(commands, overrides):
             commands[name] = None
         elif patch.get("_replace"):
             commands[name] = {k: v for k, v in patch.items() if k != "_replace"}
-        else:
-            commands[name] = deep_merge(commands.get(name, {}), patch)
+        elif name in commands:
+            commands[name] = deep_merge(commands[name], patch)
+        # else: a merge patch for a command this version doesn't have (e.g. one
+        # added in a later minor) - skip it rather than invent the command.
     return commands
 
 
@@ -314,26 +326,37 @@ def main():
         type=Path,
         default=Path(__file__).parent / "overrides.yaml",
     )
+    ap.add_argument(
+        "--docs-out",
+        type=Path,
+        help="output path for the usage-docs sidecar (default: docs/<name> next to --out)",
+    )
     ap.add_argument("--check", action="store_true", help="diff against --out instead of writing")
     args = ap.parse_args()
+    docs_out = args.docs_out or args.out.parent / "docs" / args.out.name
 
-    commands = generate(args.repo)
+    commands, docs = generate(args.repo)
     overrides = load_overrides(args.overrides)
     commands = apply_overrides(commands, overrides)
-    new_content = json.dumps(commands, indent=2, sort_keys=True) + "\n"
+    outputs = [
+        (args.out, commands),
+        (docs_out, {name: doc for name, doc in docs.items() if name in commands}),
+    ]
 
-    if args.check:
-        if not args.out.exists():
-            print(f"{args.out} does not exist", file=sys.stderr)
-            sys.exit(1)
-        old_content = args.out.read_text()
-        if old_content != new_content:
-            print(f"{args.out} is stale, rerun without --check to regenerate", file=sys.stderr)
-            sys.exit(1)
-        print(f"{args.out} is up to date ({len(commands)} commands)")
-    else:
-        args.out.write_text(new_content)
-        print(f"wrote {args.out} ({len(commands)} commands)")
+    for path, data in outputs:
+        new_content = json.dumps(data, indent=2, sort_keys=True) + "\n"
+        if args.check:
+            if not path.exists():
+                print(f"{path} does not exist", file=sys.stderr)
+                sys.exit(1)
+            if path.read_text() != new_content:
+                print(f"{path} is stale, rerun without --check to regenerate", file=sys.stderr)
+                sys.exit(1)
+            print(f"{path} is up to date ({len(data)} commands)")
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(new_content)
+            print(f"wrote {path} ({len(data)} commands)")
 
 
 if __name__ == "__main__":

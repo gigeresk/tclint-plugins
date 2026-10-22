@@ -5,10 +5,14 @@
 #
 # Patch semantics (see generate.py:deep_merge/apply_overrides):
 #   <command>: {...}        deep-merges into the scraped spec (dict keys merge,
-#                            list values - e.g. "positionals" - replace wholesale)
+#                            list values - e.g. "positionals" - replace wholesale).
+#                            Skipped for minors whose scrape lacks the command,
+#                            so patching a newer command can't add it to older
+#                            minors.
 #   <command>: null          marks the command "skip validation" (name known,
-#                            args unchecked)
-#   <command>: {_replace: true, ...}   replaces the scraped spec entirely
+#                            args unchecked); adds it to every minor
+#   <command>: {_replace: true, ...}   replaces the scraped spec entirely; adds
+#                            it to every minor
 
 get_scenes:
   # define_cmd_args documents scene_names as a required positional, but the

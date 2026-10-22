@@ -12,10 +12,10 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/fredtombs/tclint-plugins"
+Homepage = "https://github.com/gigeresk/tclint-plugins"
 
 [project.optional-dependencies]
-test = ["tclint>=0.9.0", "pytest"]
+test = ["tclint>=0.9.0", "pytest", "pyyaml"]
 dev = ["pyyaml"]
 
 [project.entry-points."tclint.plugins"]
@@ -24,11 +24,17 @@ opensta = "tclint_plugins_opensta.versions.v3_1"
 "opensta-3.0" = "tclint_plugins_opensta.versions.v3_0"
 "opensta-2.7" = "tclint_plugins_opensta.versions.v2_7"
 
+# Per-command usage docs, read by tclint-mcp (same names as the plugins above).
+[project.entry-points."tclint_mcp.docs"]
+"opensta-3.1" = "tclint_plugins_opensta.versions.v3_1"
+"opensta-3.0" = "tclint_plugins_opensta.versions.v3_0"
+"opensta-2.7" = "tclint_plugins_opensta.versions.v2_7"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-tclint_plugins_opensta = ["data/*.json"]
+tclint_plugins_opensta = ["data/*.json", "data/docs/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
