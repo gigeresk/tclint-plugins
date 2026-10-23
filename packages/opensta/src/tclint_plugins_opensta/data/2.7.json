@@ -1472,17 +1472,6 @@
       }
     }
   },
-  "get_scenes": {
-    "positionals": [
-      {
-        "name": "scene_names",
-        "required": false,
-        "value": {
-          "type": "any"
-        }
-      }
-    ]
-  },
   "get_timing_edges": {
     "positionals": [],
     "switches": {
